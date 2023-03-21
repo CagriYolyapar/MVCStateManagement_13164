@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "SessionState";
+}
+
+
+@if (Session["veri"] != null)
+{
+    <div style="background-color:aqua">
+        <p>
+            Session bilgisinin icerisindeki deger => @Session["veri"]
+        </p>
+    </div>
+}
+else
+{
+    <p>Henüz bir Session verisi yoktur</p>
+}
+@using (Html.BeginForm())
+{
+    @Html.TextBox("veri")
+
+
+    <button>Gonder</button>
+
+}
